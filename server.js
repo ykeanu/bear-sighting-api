@@ -11,7 +11,6 @@ const app = express();
 
 // MIDDLEWARE
 // ================
-
 // Parses http post requests into json
 app.use(bodyParser.json());
 // Simple algorithm for shallowparsing (false)
@@ -20,6 +19,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // ROUTES
 // ================
+require('./routes')(app);
 // ================
 
 // SERVER VALIDATION
