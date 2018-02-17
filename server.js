@@ -17,6 +17,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 // ================
 
+// DATABASE
+// ================
+require('./models');
+// ================
+
 // ROUTES
 // ================
 require('./routes')(app);

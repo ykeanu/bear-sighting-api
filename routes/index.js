@@ -3,7 +3,9 @@
 const bearSightingRoutes = require('./bearSightingRoutes');
 // ================
 
-// EXPORT TO ./server.js
+// EXPORT TO ./server
+// ================
 module.exports = function(app) {
   app.use('/', bearSightingRoutes);
 };
+// ================
