@@ -1,7 +1,7 @@
 // EXPORT TO ../controllers/bear_sightings_controller
 // ================
 module.exports = (sequelize, DataTypes) => {
-  const Bear = sequelize.define('Bear', {
+  const Bear = sequelize.define('bear', {
     bear_type: {
       type: DataTypes.STRING,
       allowNull: false
