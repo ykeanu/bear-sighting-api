@@ -30,17 +30,17 @@ app.use(express.static('public'));
 // var db = require('./models');
 
 // MySQL
-var connection = mysql.createConnection({
-  host: 'localhost',
-  port: 3306,
+// var connection = mysql.createConnection({
+//   host: 'localhost',
+//   port: 3306,
 
-  // Your username
-  user: 'root',
+//   // Your username
+//   user: 'root',
 
-  // Your password
-  password: '',
-  database: 'bearsighting'
-});
+//   // Your password
+//   password: null,
+//   database: 'bearsighting'
+// });
 
 // ================
 

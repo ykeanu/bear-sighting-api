@@ -1,7 +1,22 @@
-// const Bear = require('../models');
+const mysql = require('mysql');
+
+const connection = mysql.createConnection({
+  host: 'localhost',
+  port: 3306,
+
+  // Your username
+  user: 'root',
+
+  // Your password
+  password: '',
+  database: 'bearsighting'
+});
+
+// const connection = require('../models');
 
 // EXPORT TO ../routes/bearSightingRoutes
 // ================
+
 
 module.exports.postBearSighting = async (req, res) => {
   // object on request body
@@ -11,7 +26,7 @@ module.exports.postBearSighting = async (req, res) => {
     let newBearSighting = await connection.query("SELECT * FROM bears", function(err, res) {
       if (err) throw err;
       // Log all results of the SELECT statement
-      console.log(res);
+      console.log(newBearSighting);
       connection.end();
     });
   } catch (error) {
@@ -24,6 +39,13 @@ module.exports.getBearSightingsByQuery = async (req, res) => {
   const userQuery = req.query;
   
   try {
+    let newBearSighting = await connection.query("SELECT * FROM bears", function(err, response) {
+      if (err) throw err;
+      // Log all results of the SELECT statement
+      // console.log(res);
+      res.send(response);
+    });
+    
 
   } catch (error) {
     res.status(500).send(error);
